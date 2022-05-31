@@ -1,0 +1,11 @@
+#student1
+
+import requests
+webpage = requests.get("https://www.lottecinema.co.kr/NLCMW/Movie/List?flag=1")
+print(webpage.text)
+
+import requests
+from bs4 import BeautifulSoup
+webpage = requests.get("https://www.lottecinema.co.kr/NLCMW/Movie/List?flag=1")
+soup = BeautifulSoup(webpage.content, "html.parser")
+print(soup)
